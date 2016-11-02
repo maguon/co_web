@@ -1,5 +1,4 @@
 *.log
-config/SystemConfig.js
 conf.json
 public/apidocs/json/index.json
 .idea/*
@@ -7,4 +6,3 @@ uploads/*
 node_modules
 .DS_Store
 .DS_Store?
-which_version
