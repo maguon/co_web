@@ -55,7 +55,7 @@
         <div class="row">
             <!-- Logo BEGIN -->
             <div class="col-md-2 col-sm-2">
-                <a class="scroll site-logo" href="#promo-block" style="font-size: 28px;margin-top:-7px;"><img style="width: 44px;height: 44px;margin-top: -3px;" src="/assets/img/logo.png"/> 洺源信息</a>
+                <a class="scroll site-logo" href="#promo-block" style="font-size: 28px;margin-top:-7px;"><img style="width: 44px;height: 44px;margin-top: -3px;" src="./assets/img/logo.png"/> 洺源信息</a>
             </div>
             <!-- Logo END -->
 
@@ -232,32 +232,48 @@
 <!-- Services block BEGIN -->
 <div class="services-block content content-center" id="services">
     <div class="container">
-        <h2><strong>产品与服务</strong></h2>
+        <p style="font-size: 2.5rem;font-weight: 600;margin-bottom: 20px;letter-spacing: 1px">产品与服务</p>
         <h4>公司目前主要目标是以销售车队云平台和仓储云平台的配套硬件设备销售、软件销售、平台服务为主要盈利点.</h4>
         <h4>&nbsp;</h4>
         <h4>未来，公司以积累的物流大数据为基础面向物流运输和仓储管理的用户提供包括金融服务在内的一整套行业解决方案与决策支持。</h4>
         <h4>&nbsp;</h4>
+    </div>
+</div>
 
-        <div class="row">
-            <div class="col-md-3 col-sm-3 col-xs-12 item">
-                <i class="fa fa-truck"></i>
-                <h3>易车管</h3>
-                <p>实时车辆定位及运载信息<br>车辆运力智能调度与均衡分配</p>
+<div class="product_content content-center">
+    <div class="product_container">
+        <div class="tab-guide">
+            <div class="nav_btn storage_tab" style="background-color: #14b9d1"><p class="vc-center">物联存车</p></div>
+            <div class="nav_btn vehicle_tab" style="background-color: #ff576d"><p class="vc-center">车管助手</p></div>
+            <div class="nav_btn driver_tab" style="background-color: #8ab92e"><p class="vc-center">车驿通</p></div>
+            <div class="nav_btn dispatch_tab" style="background-color: #b161d2"><p class="vc-center">慧调配</p></div>
+        </div>
+        <div class="tab-guide_img">
+            <div class="nav_img storage_img">
+                <img src="./assets/onepage/img/product/storage_logo.png" alt="">
             </div>
-            <div class="col-md-3 col-sm-3 col-xs-12 item">
-                <i class="fa fa-mobile"></i>
-                <h3>随车仪</h3>
-                <p>司机智能终端<br>运输记录实时更新，接收任务调度</p>
+            <div class="nav_img vehicle_img">
+                <img src="./assets/onepage/img/product/vehicle_logo.png" alt="">
             </div>
-            <div class="col-md-3 col-sm-3 col-xs-12 item">
-                <i class="fa fa-signal"></i>
-                <h3>统计分析</h3>
-                <p>提供运输数据的统计分析<br>提供车队管理的智慧支持</p>
+            <div class="nav_img driver_img">
+                <img src="./assets/onepage/img/product/driver_logo.png" alt="">
             </div>
-            <div class="col-md-3 col-sm-3 col-xs-12 item">
-                <i class="fa fa-cubes"></i>
-                <h3>库管家</h3>
-                <p>仓储计划智能分配<br>最大化利用仓储资源</p>
+            <div class="nav_img dispatch_img">
+                <img src="./assets/onepage/img/product/dispatch_logo.png" alt="">
+            </div>
+        </div>
+        <div class="product">
+            <div class="limit_size">
+                <img id="storage_img" src="./assets/onepage/img/product/storage_img.png" alt="">
+            </div>
+            <div class="limit_size">
+                <img id="vehicle_img" src="./assets/onepage/img/product/vehicle_img.png" alt="">
+            </div>
+            <div class="limit_size">
+                <img id="driver_img" src="./assets/onepage/img/product/driver_img.png" alt="">
+            </div>
+            <div class="limit_size">
+                <img id="dispatch_img" src="./assets/onepage/img/product/dispatch_img.png" alt="">
             </div>
         </div>
     </div>
@@ -281,7 +297,6 @@
             <div class="col-md-4 item">
                 <img src="./assets/img/office_1.jpeg" alt="Marcus Doe" class="img-responsive">
                 <h3>会客区</h3>
-
             </div>
             <div class="col-md-4 item">
                 <img src="./assets/img/office_2.jpeg" alt="Elena Taylor" class="img-responsive">
@@ -565,6 +580,45 @@
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
     })();
+</script>
+<script>
+    $("#vehicle_img,#driver_img,#dispatch_img").hide();
+    $(".storage_tab").mouseover(function () {
+        $(".storage_img").css("display", "block");
+        $(".product_content").css("background", "#14b9d1");
+        $("#storage_img").show();
+        $("#vehicle_img,#driver_img,#dispatch_img").hide();
+    });
+    $(".storage_tab").mouseout(function () {
+        $(".storage_img").css("display", "none");
+    });
+    $(".vehicle_tab").mouseover(function () {
+        $(".vehicle_img").css("display", "block");
+        $(".product_content").css("background", "#ff576d");
+        $("#vehicle_img").show();
+        $("#storage_img,#driver_img,#dispatch_img").hide();
+    });
+    $(".vehicle_tab").mouseout(function () {
+        $(".vehicle_img").css("display", "none");
+    });
+    $(".driver_tab").mouseover(function () {
+        $(".driver_img").css("display", "block");
+        $(".product_content").css("background", "#8ab92e");
+        $("#driver_img").show();
+        $("#storage_img,#vehicle_img,#dispatch_img").hide();
+    });
+    $(".driver_tab").mouseout(function () {
+        $(".driver_img").css("display", "none");
+    });
+    $(".dispatch_tab").mouseover(function () {
+        $(".dispatch_img").css("display", "block");
+        $(".product_content").css("background", "#b161d2");
+        $("#dispatch_img").show();
+        $("#storage_img,#vehicle_img,#driver_img").hide();
+    });
+    $(".dispatch_tab").mouseout(function () {
+        $(".dispatch_img").css("display", "none");
+    });
 </script>
 </body>
 </html>
