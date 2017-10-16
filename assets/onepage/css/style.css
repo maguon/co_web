@@ -739,10 +739,39 @@ a:hover {
   min-width: 800px;
   max-width: 1520px;
 }
+.txt_font{
+  font-size: 1.5rem;
+  color: white;
+}
+.storage_txt{
+  position: absolute;
+  left: 0;
+  top: 300px;
+  /*text-align: left;*/
+}
+.vehicle_txt{
+  position: absolute;
+  left: 0;
+  top: 300px;
+}
+.driver_txt{
+  position: absolute;
+  right: 10%;
+  top: 370px;
+}
+.dispatch_txt{
+  position: absolute;
+  right: 5%;
+  top: 220px;
+}
+.phone_size{
+  width: 471px;
+  height: 312px;
+}
 .product_container{
   width: 80%;
   margin: 0 auto;
-  /*border: 2px solid blue;*/
+  /*border: 2px solid black;*/
   position: relative;
 }
 .services-block .row {
