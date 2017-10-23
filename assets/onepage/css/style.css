@@ -704,9 +704,6 @@ a:hover {
   width: 100%;
   height: 100%;
 }
-.storage_img,.vehicle_img,.driver_img,.dispatch_img{
-  display: none;
-}
 .storage_img{
   position: absolute;
   left: 0;

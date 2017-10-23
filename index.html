@@ -620,41 +620,43 @@
 </script>
 <script>
     $("#vehicle_img,#driver_img,#dispatch_img").hide();
+    $(".vehicle_img,.driver_img,.dispatch_img").hide();
     $(".storage_tab").mouseover(function () {
-        $(".storage_img").css("display", "block");
+        $(".storage_img").show();
         $(".product_content").css("background", "#14b9d1");
         $("#storage_img").show();
         $("#vehicle_img,#driver_img,#dispatch_img").hide();
     });
     $(".storage_tab").mouseout(function () {
-        $(".storage_img").css("display", "none");
+        $(".storage_img").hide();
     });
     $(".vehicle_tab").mouseover(function () {
-        $(".vehicle_img").css("display", "block");
+        $(".storage_img").hide();
+        $(".vehicle_img").show();
         $(".product_content").css("background", "#ff576d");
         $("#vehicle_img").show();
         $("#storage_img,#driver_img,#dispatch_img").hide();
     });
     $(".vehicle_tab").mouseout(function () {
-        $(".vehicle_img").css("display", "none");
+        $(".vehicle_img").hide();
     });
     $(".driver_tab").mouseover(function () {
-        $(".driver_img").css("display", "block");
+        $(".driver_img").show();
         $(".product_content").css("background", "#8ab92e");
         $("#driver_img").show();
         $("#storage_img,#vehicle_img,#dispatch_img").hide();
     });
     $(".driver_tab").mouseout(function () {
-        $(".driver_img").css("display", "none");
+        $(".driver_img").hide();
     });
     $(".dispatch_tab").mouseover(function () {
-        $(".dispatch_img").css("display", "block");
+        $(".dispatch_img").show();
         $(".product_content").css("background", "#b161d2");
         $("#dispatch_img").show();
         $("#storage_img,#vehicle_img,#driver_img").hide();
     });
     $(".dispatch_tab").mouseout(function () {
-        $(".dispatch_img").css("display", "none");
+        $(".dispatch_img").hide();
     });
 </script>
 </body>
