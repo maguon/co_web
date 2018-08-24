@@ -248,6 +248,10 @@
             <div class="nav_btn vehicle_tab" style="background-color: #ff576d"><p class="vc-center">车管助手</p></div>
             <div class="nav_btn driver_tab" style="background-color: #95c535"><p class="vc-center">车驿通</p></div>
             <div class="nav_btn dispatch_tab" style="background-color: #b161d2"><p class="vc-center">慧调配</p></div>
+            <div class="nav_btn damage_tab" style="background-color: #18273c"><p class="vc-center">质安栈</p></div>
+            <div class="nav_btn finance_tab" style="background-color: #d3a024"><p class="vc-center">水滴财通</p></div>
+            <div class="nav_btn settlement_tab" style="background-color: #14a2d1"><p class="vc-center">捷益结</p></div>
+
         </div>
         <div class="tab-guide_img">
             <div class="nav_img storage_img">
@@ -261,6 +265,15 @@
             </div>
             <div class="nav_img dispatch_img">
                 <img src="./assets/onepage/img/product/dispatch_logo.png" alt="">
+            </div>
+            <div class="nav_img damage_img">
+                <img src="./assets/onepage/img/product/damage_logo.png" alt="">
+            </div>
+            <div class="nav_img finance_img">
+                <img src="./assets/onepage/img/product/finance_logo.png" alt="">
+            </div>
+            <div class="nav_img settlement_img">
+                <img src="./assets/onepage/img/product/settlement_logo.png" alt="">
             </div>
         </div>
         <div class="product">
@@ -310,6 +323,39 @@
                     <p >高效、智能的调配任务</p>
                     <p >智能提示路线选择</p>
                     <p >良好的数据兼容性</p>
+                </div>
+            </div>
+            <div class="limit_size" id="damage_img">
+                <img src="./assets/onepage/img/product/damage_img.jpg" alt="">
+                <div class="dispatch_txt txt_font">
+                    <p style="font-size: 2rem;font-weight: 600">质安栈</p>
+                    <br>
+                    <p style="text-align:right;">及时上报车辆质损信息</p>
+                    <p style="text-align:right;">提供质损处理、理赔处理等功能</p>
+                    <p style="text-align:right;">对车辆报损到完成理赔提供一体化的服务</p>
+                    <p style="text-align:right;">实时的处理进度</p>
+                </div>
+            </div>
+            <div class="limit_size" id="finance_img">
+                <img src="./assets/onepage/img/product/finance_img.jpg" alt="">
+                <div class="storage_txt txt_font" style="margin-left: -50px;">
+                    <p style="font-size: 2rem;font-weight: 600;">水滴财通</p>
+                    <br>
+                    <p style="text-align:left;">颠覆传统工作方式的在线财务软件</p>
+                    <p style="text-align:left;">车辆理赔管理</p>
+                    <p style="text-align:left;">出车款管理</p>
+                    <p style="text-align:left;">司机工资，各种费用结算等</p>
+                </div>
+            </div>
+            <div class="limit_size" id ="settlement_img">
+                <img src="./assets/onepage/img/product/settlement_img.jpg" alt="">
+                <div class="storage_txt txt_font" style="margin-left: -50px;">
+                    <p style="font-size: 2rem;font-weight: 600;">捷益结</p>
+                    <br>
+                    <p style="text-align:left;">通过交接单对车辆进行结算</p>
+                    <p style="text-align:left;">良好的交接车辆系统</p>
+                    <p style="text-align:left;">高效、智能的结算任务</p>
+                    <p style="text-align:left;">准确的数据统计</p>
                 </div>
             </div>
         </div>
@@ -619,13 +665,13 @@
     })();
 </script>
 <script>
-    $("#vehicle_img,#driver_img,#dispatch_img").hide();
-    $(".vehicle_img,.driver_img,.dispatch_img").hide();
+    $("#vehicle_img,#driver_img,#dispatch_img,#damage_img,#finance_img,#settlement_img").hide();
+    $(".vehicle_img,.driver_img,.dispatch_img,.damage_img,.finance_img,.settlement_img").hide();
     $(".storage_tab").mouseover(function () {
         $(".storage_img").show();
         $(".product_content").css("background", "#14b9d1");
         $("#storage_img").show();
-        $("#vehicle_img,#driver_img,#dispatch_img").hide();
+        $("#vehicle_img,#driver_img,#dispatch_img,#damage_img,#finance_img,#settlement_img").hide();
     });
     $(".storage_tab").mouseout(function () {
         $(".storage_img").hide();
@@ -635,7 +681,7 @@
         $(".vehicle_img").show();
         $(".product_content").css("background", "#ff576d");
         $("#vehicle_img").show();
-        $("#storage_img,#driver_img,#dispatch_img").hide();
+        $("#storage_img,#driver_img,#dispatch_img,#damage_img,#finance_img,#settlement_img").hide();
     });
     $(".vehicle_tab").mouseout(function () {
         $(".vehicle_img").hide();
@@ -645,7 +691,7 @@
         $(".driver_img").show();
         $(".product_content").css("background", "#8ab92e");
         $("#driver_img").show();
-        $("#storage_img,#vehicle_img,#dispatch_img").hide();
+        $("#storage_img,#vehicle_img,#dispatch_img,#damage_img,#finance_img,#settlement_img").hide();
     });
     $(".driver_tab").mouseout(function () {
         $(".driver_img").hide();
@@ -655,10 +701,40 @@
         $(".dispatch_img").show();
         $(".product_content").css("background", "#b161d2");
         $("#dispatch_img").show();
-        $("#storage_img,#vehicle_img,#driver_img").hide();
+        $("#storage_img,#vehicle_img,#driver_img,#damage_img,#finance_img,#settlement_img").hide();
     });
     $(".dispatch_tab").mouseout(function () {
         $(".dispatch_img").hide();
+    });
+    $(".damage_tab").mouseover(function () {
+        $(".storage_img").hide();
+        $(".damage_img").show();
+        $(".product_content").css("background", "#18273c");
+        $("#damage_img").show();
+        $("#storage_img,#vehicle_img,#driver_img,#dispatch_img,#finance_img,#settlement_img").hide();
+    });
+    $(".damage_tab").mouseout(function () {
+        $(".damage_img").hide();
+    });
+    $(".finance_tab").mouseover(function () {
+        $(".storage_img").hide();
+        $(".finance_img").show();
+        $(".product_content").css("background", "#d3a024");
+        $("#finance_img").show();
+        $("#storage_img,#vehicle_img,#driver_img,#dispatch_img,#damage_img,#settlement_img").hide();
+    });
+    $(".finance_tab").mouseout(function () {
+        $(".finance_img").hide();
+    });
+    $(".settlement_tab").mouseover(function () {
+        $(".storage_img").hide();
+        $(".settlement_img").show();
+        $(".product_content").css("background", "#14a2d1");
+        $("#settlement_img").show();
+        $("#storage_img,#vehicle_img,#driver_img,#dispatch_img,#damage_img,#finance_img").hide();
+    });
+    $(".settlement_tab").mouseout(function () {
+        $(".settlement_img").hide();
     });
 </script>
 </body>
